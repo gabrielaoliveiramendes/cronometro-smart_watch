@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 25px;
+}
+
+
+.tela {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 30px;
+    height: 300px;
+    overflow: auto;
+}
+
+.tela::-webkit-scrollbar {
+    display: none;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    top: 0;
+    position: sticky;
+    background-color: black;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+svg {
+    width: 45px;
+    fill: white;
+}
+
+.exercicios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exercicio {
+    background-color: #46464686;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    height: 100px;
+    justify-content: center;
+}
+
+.atividade {
+    font-weight: 600;
+}
+
+.cronometro {
+    display: none;
+    margin-top: 25px;
+}
+
+.tempo {
+    display: flex;
+    font-size: 40px;
+    gap: 5px;
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+    width: 55px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+img {
+    display: block;
+}
+
+.botao {
+    width: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.play,
+.pause {
+    background-color: #507f6a;
+}
+
+.close {
+    background-color: #7b3f3f;
+}
+
+.pause {
+    display: none;
+}
+
+.voltar {
+    opacity: 0;
+    position: absolute;
+    height: 35px;
+    cursor: pointer;
+    fill: #ffffff;
+    transition: opacity 0.2s;
+}
+
+.tela--cronometro .exercicios {
+    display: none;
+}
+
+.tela--cronometro h1 {
+    opacity: 0;
+}
+
+.tela--cronometro .voltar {
+    opacity: 1;
+}
+
+.tela--cronometro .cronometro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.iniciou .play {
+    display: none;
+}
+
+.iniciou .pause {
+    display: block;
+}
+
+
